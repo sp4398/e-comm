@@ -1,38 +1,81 @@
-.App {
-  text-align: center;
+.body {
+  margin-top: 150px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #5dd641;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  top: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nav-items > ul {
+  display: flex;
+  list-style-type: none;
+  color: white;
+  margin-right: 20px;
+  margin-top: 20px;
+  text-decoration: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav-items > ul > li {
+  padding: 10px;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.proAdd {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 300px;
+  margin-left: 550px;
+  margin-top: 100px;
 }
 
-.App-link {
-  color: #61dafb;
+.input{
+  height: 20px;
+  border: 2px solid black;
+  border-radius: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn3 {
+  margin: 30px 100px;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 32%;
+  height: 30px;
+  background-color: #5dd641;
+}
+
+.btn2 {
+  margin-left: 35px;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 32%;
+  height: 30px;
+  background-color: #5dd641;
+}
+
+.title {
+  margin-left: 90px;
+}
+
+.btnContainer {
+  display: flex;
+}
+
+.editPage {
+  margin-top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.error-message{
+  color: red;
 }

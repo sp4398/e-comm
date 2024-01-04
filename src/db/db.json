@@ -1,0 +1,39 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Vivo - Y73",
+      "image": "https://asia-exstatic-vivofs.vivo.com/PSee2l50xoirPK7y/1646793103995/7fb5b6d59bd53f995e7f9cd042a0d209.png",
+      "price": "25000",
+      "category": "Electronics"
+    },
+    {
+      "id": "2",
+      "name": "Almond Butter - 794g",
+      "image": "https://i5.walmartimages.com/seo/Sam-s-Choice-Creamy-Almond-Butter-12-oz_f446377d-5736-4ab4-911c-9db9413aa7a7.0649af5b4054e7a7c0cbe66c28586804.jpeg",
+      "price": "500",
+      "category": "Grocery"
+    },
+    {
+      "id": "3",
+      "name": "Men's Jeans",
+      "image": "https://5.imimg.com/data5/DK/FA/NX/GLADMIN-51628136/mens-denim-skinny-jeans-500x500.jpg",
+      "price": "1500",
+      "category": "Clothings"
+    },
+    {
+      "category": "Grocery",
+      "name": "Tide - 5kg",
+      "image": "https://www.jiomart.com/images/product/original/491252835/tide-jasmine-rose-detergent-powder-5-kg-get-extra-1-kg-free-product-images-o491252835-p590838653-0-202203151949.jpg",
+      "price": "500",
+      "id": "X1VPvSj"
+    },
+    {
+      "category": "Clothings",
+      "name": "Men's T-Shirt",
+      "price": "499",
+      "image": "https://cdn.pixabay.com/photo/2016/12/06/09/31/blank-1886008_640.png",
+      "id": "r25yoKz"
+    }
+  ]
+}

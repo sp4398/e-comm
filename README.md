@@ -68,3 +68,18 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+product list page -> card
+    product -> img, name, price, category
+    edit btn, delete btn
+product add
+product edit
+
+
+[{
+    id: "1"
+    name: "test",
+    price:"100",
+    category: "test",
+}]

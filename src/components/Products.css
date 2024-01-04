@@ -1,0 +1,60 @@
+.card-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+.card{
+    width: 260px;
+    background-color: #f0f0f0;
+    margin: 40px 80px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.body{
+    display: flex;
+}
+
+.btn{
+    display: flex;
+}
+
+
+.btn button{
+    cursor: pointer;
+    border-radius: 5px;
+    width: 60px;
+    height: 30px;
+    margin-left: 45px;
+    background-color: #5DD641;
+
+}
+
+.btn1{
+    margin-left: 40px;
+}
+
+
+.img{
+    width: 250px;
+    margin-left: 3px;
+}
+
+.filter{
+    margin-left:100px;
+}
+
+.search{
+    margin-left: 600px;
+}
+
+.search-btn{
+    cursor: pointer;
+    border-radius: 5px;
+    width: 60px;
+    height: 30px;
+    margin-left: 45px;
+    background-color: #5DD641;
+    color: white;
+}

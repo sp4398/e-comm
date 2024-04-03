@@ -5,12 +5,12 @@ import { Link } from "react-router-dom";
 const Products = () => {
   const [result, setResult] = useState([]);
   const [searchText, setSearchText] = useState("");
-  const [filteredResult, setFilteredResult] = useState([]); 
-  const [selectedCategory, setSelectedCategory] = useState(null); 
+  const [filteredResult, setFilteredResult] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState(null);
 
   const uniqueCategories = [
     ...new Set(result.map((product) => product.category)),
-  ]; 
+  ];
 
   useEffect(() => {
     fetch("http://localhost:3001/products")
@@ -19,8 +19,17 @@ const Products = () => {
         console.log(data);
         setResult(data);
         setFilteredResult(data);
+        console.log("1566");
+        console.log(filteredResult);
       });
   }, []);
+
+  useEffect(() => {
+    const filteredItems = result.filter((res) =>
+      res.name.toLowerCase().includes(searchText.toLowerCase())
+    );
+    setFilteredResult(filteredItems);
+  }, [searchText, result]);
 
   // delete
   const handleDelete = (itemId) => {
@@ -48,7 +57,6 @@ const Products = () => {
     <div className="body">
       <div className="filter">
         {" "}
-        {/*//filter the products according to their category */}
         <label htmlFor="categoryFilter">Filter by Category: </label>
         <select
           id="categoryFilter"
@@ -83,17 +91,7 @@ const Products = () => {
             borderRadius: "5px",
           }}
         />
-        <button
-          className="search-btn"
-          onClick={() => {
-            const searchedItem = result.filter((res) =>
-              res.name.toLowerCase().includes(searchText.toLowerCase())
-            );
-            setFilteredResult(searchedItem);
-          }}
-        >
-          Search
-        </button>
+        <button className="search-btn">Search</button>
       </div>
 
       <div className="card-container">

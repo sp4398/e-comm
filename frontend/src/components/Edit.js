@@ -1,11 +1,16 @@
-// EditProduct.js
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import "../App.css";
 
 const Edit = () => {
   const { id } = useParams();
-  const [editedData, setEditedData] = useState({});
+  console.log("ID received:", id); // Log the id parameter
+  const [editedData, setEditedData] = useState({
+    category: "",
+    name: "",
+    price: "",
+    image: ""
+  });
   const [formErrors, setFormErrors] = useState({});
   const [isFormValid, setIsFormValid] = useState(true);
 
@@ -16,6 +21,7 @@ const Edit = () => {
         setEditedData(data);
       });
   }, [id]);
+  
 
   const handleSave = () => {
     if (isFormValid){
@@ -29,7 +35,6 @@ const Edit = () => {
       .then((response) => {
         if (response.ok) {
           console.log("Data updated successfully");
-          // Redirect back to the Products page after saving
           window.location.href = "/";
         } else {
           console.error("Failed to update data");

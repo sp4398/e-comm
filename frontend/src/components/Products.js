@@ -13,13 +13,12 @@ const Products = () => {
   ];
 
   useEffect(() => {
-    fetch("http://localhost:3001/products")
+    fetch(`http://localhost:3001/products`)
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
         setResult(data);
         setFilteredResult(data);
-        console.log("1566");
         console.log(filteredResult);
       });
   }, []);
@@ -93,22 +92,21 @@ const Products = () => {
         />
         <button className="search-btn">Search</button>
       </div>
-
       <div className="card-container">
         {filteredProducts.map((d) => (
-          <div className="card" key={d.id} style={{ borderRadius: "5px" }}>
+          <div className="card" key={d._id} style={{ borderRadius: "5px" }}>
             <p>Category: {d.category}</p>
             <img src={d.image} alt={d.name} className="img" />
             <h4>{d.name}</h4>
             <p>&#8377; {d.price}</p>
             <div className="btn">
-              <Link to={`/edit/${d.id}`}>
+              <Link to={`/edit/${d._id}`}>
                 <button style={{ color: "white" }}>Edit</button>
               </Link>
 
               <button
                 className="btn1"
-                onClick={() => handleDelete(d.id)}
+                onClick={() => handleDelete(d._id)}
                 style={{ color: "white" }}
               >
                 Delete

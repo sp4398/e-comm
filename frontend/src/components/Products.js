@@ -21,7 +21,7 @@ const Products = () => {
         setFilteredResult(data);
         console.log(filteredResult);
       });
-  }, []);
+  }, [filteredResult]);
 
   useEffect(() => {
     const filteredItems = result.filter((res) =>

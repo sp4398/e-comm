@@ -21,14 +21,14 @@ const Products = () => {
         setFilteredResult(data);
         console.log(filteredResult);
       });
-  }, [filteredResult]);
+  },[]);
 
   useEffect(() => {
     const filteredItems = result.filter((res) =>
-      res.name.toLowerCase().includes(searchText.toLowerCase())
-    );
-    setFilteredResult(filteredItems);
-  }, [searchText, result]);
+      res.name.toLowerCase().includes(searchText.toLowerCase()) //Converts the name of the current item and searchText to lowercase 
+    );                                                          //and includes check the search text contain  item name
+    setFilteredResult(filteredItems); 
+  }, [searchText, result]); // re-run whenever either searchText or result changes
 
   // delete
   const handleDelete = (itemId) => {
@@ -80,7 +80,7 @@ const Products = () => {
         <input
           type="text"
           value={searchText}
-          placeholder="Search An Item"
+          placeholder="Search Items..."
           onChange={(e) => {
             setSearchText(e.target.value);
           }}

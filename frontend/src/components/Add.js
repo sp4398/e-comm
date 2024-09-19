@@ -58,6 +58,7 @@ const Add = () => {
         setName("");
         setPrice("");
         setImage("");
+        window.location.href = "/"; //move back to show product page
       })
       .catch((error) => {
         console.error("Error:", error);

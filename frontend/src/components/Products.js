@@ -61,8 +61,9 @@ const Products = () => {
           id="categoryFilter"
           style={{
             height: "25px",
-            border: "2px solid black",
+            border: "none",
             cursor: "pointer",
+            backgroundColor: "#f1f1f1",
             borderRadius: "5px",
           }}
           onChange={(e) => setSelectedCategory(e.target.value)}
@@ -86,8 +87,9 @@ const Products = () => {
           }}
           style={{
             height: "25px",
-            border: "2px solid black",
+            border: "none",
             borderRadius: "5px",
+            backgroundColor: "#f1f1f1",
           }}
         />
         <button className="search-btn">Search</button>
